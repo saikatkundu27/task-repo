@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { SHC } from 'src/app/models/shared-model';
 
 @Component({
   selector: 'app-shc-search',
@@ -8,8 +9,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class ShcSearchComponent implements OnInit {
   searchForm!: FormGroup;
-  shcData: { code: string; desc: string }[] = [];
-  filteredShcData: { code: string; desc: string }[] = [];
+  shcData: SHC[] = [];
+  filteredShcData: SHC[] = [];
   constructor() {
     this.searchForm = new FormGroup({
       searchText: new FormControl(''),

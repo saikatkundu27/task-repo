@@ -1,0 +1,43 @@
+<div class="cc">
+  <form [formGroup]="searchForm" class="search-form">
+    <div class="search-bar">
+      <i class="fa fa-search icon"></i>
+      <input
+        class="input-field"
+        type="text"
+        placeholder="Search"
+        formControlName="searchText"
+      />
+    </div>
+  </form>
+  <div class="results">
+    <table>
+      <tr>
+        <th>Commodity Code</th>
+        <th>Commodity Description</th>
+      </tr>
+      <ng-container
+        *ngIf="filteredCommodityCodeData.length > 0; else noResultFound"
+      >
+        <tr *ngFor="let data of filteredCommodityCodeData">
+          <td>{{ data.code }}</td>
+          <td>{{ data.desc }}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+  <div class="goods-check">
+    <input class="input-check" type="checkbox" [checked]="isChecked"/>
+    <span>Use the same Goods Description</span>
+  </div>
+
+  <app-search-footer
+    (cancel)="handleCancel()"
+    (apply)="handleApply()"
+  ></app-search-footer>
+</div>
+<ng-template #noResultFound>
+  <tr>
+    <td colspan="2">No result found!!</td>
+  </tr>
+</ng-template>

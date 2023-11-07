@@ -5,6 +5,7 @@ import { TaskOneRoutingModule } from './task-one-routing.module';
 import { TaskOneLandingComponent } from './components/task-one-landing/task-one-landing.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchFooterComponent } from './components/search-footer/search-footer.component';
+import { CommodityCodeSearchComponent } from './components/commodity-code-search/commodity-code-search.component';
 
 
 
@@ -12,7 +13,8 @@ import { SearchFooterComponent } from './components/search-footer/search-footer.
   declarations: [
     ShcSearchComponent,
     TaskOneLandingComponent,
-    SearchFooterComponent
+    SearchFooterComponent,
+    CommodityCodeSearchComponent
   ],
   imports: [
     CommonModule,

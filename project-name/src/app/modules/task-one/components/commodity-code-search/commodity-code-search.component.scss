@@ -1,0 +1,26 @@
+$cc-width: 400px;
+$cc-height: 300px;
+
+.cc {
+  width: $cc-width;
+  height: $cc-height;
+}
+.search-bar {
+  .icon {
+    left: $cc-width - 20px;
+  }
+}
+.input-check {
+  display: inline;
+}
+.goods-check {
+  font-weight: 100;
+  font-style: italic;
+  font-size: smaller;
+  padding: 10px;
+  background-color: #01a3e0;
+  span {
+    padding-left: 5px;
+    color: white;
+  }
+}
