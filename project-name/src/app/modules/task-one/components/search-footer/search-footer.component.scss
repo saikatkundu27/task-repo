@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  background-color: #ebedef;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+
+  .btn {
+    margin: 5px;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 0px;
+    cursor: pointer;
+  }
+  .apply {
+    background-color: #01a3e0;
+  }
+  .cancel
+  {
+    background-color: #667380;
+  }
+}

@@ -1,0 +1,36 @@
+<div class="shc">
+  <form [formGroup]="searchForm" class="search-form">
+    <div class="search-bar">
+      <i class="fa fa-search icon"></i>
+      <input
+        class="input-field"
+        type="text"
+        placeholder="Search"
+        formControlName="searchText"
+      />
+    </div>
+  </form>
+  <div class="results">
+    <table>
+      <tr>
+        <th>Code</th>
+        <th>Description</th>
+      </tr>
+      <ng-container *ngIf="filteredShcData.length > 0; else noResultFound">
+        <tr *ngFor="let data of filteredShcData">
+          <td>{{ data.code }}</td>
+          <td>{{ data.desc }}</td>
+        </tr>
+      </ng-container>
+    </table>
+  </div>
+  <app-search-footer
+    (cancel)="handleCancel()"
+    (apply)="handleApply()"
+  ></app-search-footer>
+</div>
+<ng-template #noResultFound>
+  <tr>
+    <td colspan="2">No result found!!</td>
+  </tr>
+</ng-template>
