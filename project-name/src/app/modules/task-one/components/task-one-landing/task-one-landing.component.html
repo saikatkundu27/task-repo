@@ -1,3 +1,21 @@
-<!-- <app-shc-search></app-shc-search> -->
-<!-- <app-commodity-code-search></app-commodity-code-search> -->
-<app-info-table></app-info-table>
+<button id="myBtn" (click)="open()">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="modal">
+  <div class="modal-header">
+   Table heading
+    <span class="close" (click)="close()">
+      <i class="fa fa-times"></i>
+     </span>
+  </div>
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+    <!-- <app-info-table></app-info-table>  -->
+    <!-- <app-commodity-code-search></app-commodity-code-search> -->
+
+    <app-shc-search></app-shc-search>
+  </div>
+
+</div>
+
