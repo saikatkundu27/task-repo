@@ -4,3 +4,13 @@ export interface SHC{
 export interface CommodityCode{
     code: number; desc: string 
 }
+export interface TableInfo
+{
+    isChecked:boolean;
+      type:string;
+      flight:string;
+      transaction:string;
+      partner:string;
+      activity:string;
+      miles:number;
+}

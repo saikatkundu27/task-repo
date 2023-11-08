@@ -1,0 +1,40 @@
+$info-width: 1000px;
+//$info-height: 300px;
+
+.info {
+  width: $info-width;
+ // height: $info-height;
+ height: 100%;
+  overflow-y: scroll;
+  table {
+    width: 100%;
+
+    border-spacing: 0;
+  }
+  th {
+    text-align: left;
+    font-weight: 7s00;
+    color: #0d2478;
+  }
+
+  th,
+  td {
+    border: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    border-collapse: collapse;
+    border-color: #f0f0f0;
+    padding: 10px;
+  }
+  tr:hover {
+    td {
+      background-color: #f8f8f8;
+      font-weight: 600;
+      color: black !important;
+    }
+  }
+}
+.sort-icon
+{
+    cursor: pointer;
+}

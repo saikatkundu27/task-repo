@@ -1,0 +1,34 @@
+<div class="info">
+  <table>
+    <tr>
+      <th>
+        <input type="checkbox" name="all" (change)="handleSelectAll($event)" />
+      </th>
+      <th>Type</th>
+      <th>Flight</th>
+      <th>Transaction</th>
+      <th>Partner</th>
+      <th>Activity</th>
+      <th>
+        Miles 
+        <i class="fa fa-arrow-up sort-icon" (click)="sort('ASC','miles')" *ngIf="sortType === 'DESC'"></i>
+        <i class="fa fa-arrow-down sort-icon" (click)="sort('DESC','miles')" *ngIf="sortType === 'ASC'"></i>
+      </th>
+    </tr>
+    <tr *ngFor="let info of tableInfo; index as i">
+      <td>
+        <input
+          type="checkbox"
+          name="{{ info.type }}"
+          [checked]="info.isChecked"
+        />
+      </td>
+      <td>{{ info.type }}</td>
+      <td>{{ info.flight }}</td>
+      <td>{{ info.transaction }}</td>
+      <td>{{ info.partner }}</td>
+      <td>{{ info.activity }}</td>
+      <td>{{ info.miles }}</td>
+    </tr>
+  </table>
+</div>

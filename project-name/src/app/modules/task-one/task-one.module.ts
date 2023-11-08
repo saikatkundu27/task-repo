@@ -6,6 +6,7 @@ import { TaskOneLandingComponent } from './components/task-one-landing/task-one-
 import { ReactiveFormsModule } from '@angular/forms';
 import { SearchFooterComponent } from './components/search-footer/search-footer.component';
 import { CommodityCodeSearchComponent } from './components/commodity-code-search/commodity-code-search.component';
+import { InfoTableComponent } from './components/info-table/info-table.component';
 
 
 
@@ -14,7 +15,8 @@ import { CommodityCodeSearchComponent } from './components/commodity-code-search
     ShcSearchComponent,
     TaskOneLandingComponent,
     SearchFooterComponent,
-    CommodityCodeSearchComponent
+    CommodityCodeSearchComponent,
+    InfoTableComponent
   ],
   imports: [
     CommonModule,
