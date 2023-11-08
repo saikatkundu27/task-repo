@@ -2,12 +2,14 @@ $cc-width: 400px;
 $cc-height: 300px;
 
 .cc {
-  width: $cc-width;
-  height: $cc-height;
+  width: $cc-width !important;
+  height: $cc-height !important;
+//  overflow-y: scroll;
+//  overflow-x: hidden;
 }
 .search-bar {
   .icon {
-    left: $cc-width - 20px;
+    left: $cc-width - 35px;
   }
 }
 .input-check {

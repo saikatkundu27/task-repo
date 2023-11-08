@@ -6,25 +6,15 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@ang
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+@Input() title:string='Modal Header';
+  modal: boolean = false;
+  type:string='';
+  ngOnInit(): void {}
 
-  @Input() size? = 'md';
-  @Input() title? = 'Modal title';
-
-  @Output() closeEvent = new EventEmitter();
-  @Output() submitEvent = new EventEmitter();
-
-  constructor(private elementRef: ElementRef) {}
-  ngOnInit(): void {
-   
+  open() {
+    this.modal = true;
   }
-
-  close(): void {
-    this.elementRef.nativeElement.remove();
-    this.closeEvent.emit();
-  }
-
-  submit(): void {
-    this.elementRef.nativeElement.remove();
-    this.submitEvent.emit();
+  close() {
+    this.modal = false;
   }
 }

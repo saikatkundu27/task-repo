@@ -1,14 +1,16 @@
-$shc-width: 500px;
+$shc-width: 400px;
 $shc-height: 200px;
 
 .shc {
-  width: $shc-width;
-  height: $shc-height;
+  width: $shc-width !important;
+  height: $shc-height !important;
+//   overflow-y: scroll;
+//  overflow-x: hidden;
 }
 .search-bar {
   .icon {
    
-    left: $shc-width - 20px;
+    left: $shc-width - 35px;
    
   }
 }

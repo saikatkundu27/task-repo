@@ -1,5 +1,6 @@
-import { Component, OnInit, TemplateRef } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { ModalService } from '../../services/modal.service';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-task-one-landing',
@@ -8,14 +9,17 @@ import { ModalService } from '../../services/modal.service';
 })
 export class TaskOneLandingComponent implements OnInit {
   constructor() {}
-  modal: boolean = false;
-
+ 
+  @ViewChild('modal') modal!:ModalComponent
   ngOnInit(): void {}
 
-  open() {
-    this.modal = true;
+  open(type:string) {
+    this.modal.type=type;
+    this.modal.modal=true;
+
+    type==='table'?this.modal.title='Table Heading':null;
+    type==='com'?this.modal.title='Commodity Code':null;
+    type==='shc'?this.modal.title='SHC':null;
   }
-  close() {
-    this.modal = false;
-  }
+
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CommodityCode } from 'src/app/models/shared-model';
 
@@ -8,10 +8,13 @@ import { CommodityCode } from 'src/app/models/shared-model';
   styleUrls: ['./commodity-code-search.component.scss'],
 })
 export class CommodityCodeSearchComponent implements OnInit {
+  @Input('showInput') showInput :boolean=false;
+  @Output() dismiss=new EventEmitter();
   searchForm!: FormGroup;
   isChecked:boolean=false;
   commodityCodeData: CommodityCode[] = [];
   filteredCommodityCodeData: CommodityCode[] = [];
+
   constructor() {
     this.searchForm = new FormGroup({
       searchText: new FormControl(''),
@@ -25,19 +28,19 @@ export class CommodityCodeSearchComponent implements OnInit {
       },
       {
         code: 112368545687,
-        desc: 'Desc1',
+        desc: 'Desc2',
       },
       {
         code: 112368545687,
-        desc: 'Desc1',
+        desc: 'Desc3',
       },
       {
         code: 112368545687,
-        desc: 'Desc1',
+        desc: 'Desc4',
       },
       {
         code: 1123685545687,
-        desc: 'Desc1',
+        desc: 'Desc5',
       },
       {
         code: 1189898545687,
@@ -75,9 +78,11 @@ export class CommodityCodeSearchComponent implements OnInit {
     });
   }
   handleCancel() {
+    this.dismiss.emit('close');
     console.log('Cancel called');
   }
   handleApply() {
+    this.dismiss.emit('close');
     console.log('Apply called');
   }
 }

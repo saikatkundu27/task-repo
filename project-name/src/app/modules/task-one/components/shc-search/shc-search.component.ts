@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SHC } from 'src/app/models/shared-model';
+
 
 @Component({
   selector: 'app-shc-search',
@@ -8,9 +9,12 @@ import { SHC } from 'src/app/models/shared-model';
   styleUrls: ['./shc-search.component.scss'],
 })
 export class ShcSearchComponent implements OnInit {
+  @Input('showInput') showInput :boolean=false;
+  @Output() dismiss=new EventEmitter();
   searchForm!: FormGroup;
   shcData: SHC[] = [];
-  filteredShcData: SHC[] = [];
+  filteredShcData: SHC[] = []; 
+
   constructor() {
     this.searchForm = new FormGroup({
       searchText: new FormControl(''),
@@ -32,6 +36,19 @@ export class ShcSearchComponent implements OnInit {
         code: 'ABCG',
         desc: 'Desc14',
       },
+      {
+        code: 'ABCG',
+        desc: 'Desc14',
+      },
+      {
+        code: 'ABCG',
+        desc: 'Desc14',
+      },
+      {
+        code: 'ABCG',
+        desc: 'Desc14',
+      },
+
     ];
     this.filteredShcData = this.shcData;
   }
@@ -47,10 +64,12 @@ export class ShcSearchComponent implements OnInit {
     });
   }
   handleCancel() {
+    this.dismiss.emit('close');
     console.log('Cancel called');
   }
   handleApply()
   {
+    this.dismiss.emit('close');
     console.log('Apply called');
   }
 }

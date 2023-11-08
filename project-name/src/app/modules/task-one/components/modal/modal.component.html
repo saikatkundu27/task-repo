@@ -1,14 +1,24 @@
-<div class="modal {{ size }}">
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="modal">
   <div class="modal-header">
     {{ title }}
-    <span class="modal-close" (click)="close()">✕</span>
+    <span class="close" (click)="close()">
+      <i class="fa fa-times"></i>
+    </span>
   </div>
+  <!-- Modal content -->
   <div class="modal-content">
-    <ng-content></ng-content>
-  </div>
-  <!-- <div class="modal-footer">
-    <button (click)="submit()">Submit</button>
-  </div> -->
-</div>
+    <app-info-table *ngIf="type === 'table'"></app-info-table>
+    <app-commodity-code-search
+      [showInput]="true"
+      (dismiss)="close()"
+      *ngIf="type === 'com'"
+    ></app-commodity-code-search>
 
-<div class="modal-backdrop" (click)="close()"></div>
+    <app-shc-search
+      [showInput]="true"
+      (dismiss)="close()"
+      *ngIf="type === 'shc'"
+    ></app-shc-search>
+  </div>
+</div>
