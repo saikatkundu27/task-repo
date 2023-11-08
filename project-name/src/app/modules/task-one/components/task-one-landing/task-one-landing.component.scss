@@ -1,3 +1,4 @@
+@import '../../../../../variables.scss';
 .landing-btns {
   display: flex;
   justify-content: center;
@@ -9,7 +10,7 @@
     border: 0px;
     cursor: pointer;
     border-radius: 2px;
-    background-color: #01a3e0;
+    background-color: $accleya-light-blue;
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }

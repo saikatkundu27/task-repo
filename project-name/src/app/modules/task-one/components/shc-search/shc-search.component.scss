@@ -1,5 +1,4 @@
-$shc-width: 400px;
-$shc-height: 200px;
+@import '../../../../../variables.scss';
 
 .shc {
   width: $shc-width !important;

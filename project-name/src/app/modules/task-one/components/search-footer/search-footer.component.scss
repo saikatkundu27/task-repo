@@ -1,6 +1,7 @@
+@import '../../../../../variables.scss';
 .footer {
   width: 100%;
-  background-color: #ebedef;
+  background-color: $footer-bg-color;
   padding: 10px;
   display: flex;
   justify-content: flex-end;
@@ -15,10 +16,10 @@
     border-radius: 2px;
   }
   .apply {
-    background-color: #01a3e0;
+    background-color: $accleya-light-blue;
   }
   .cancel
   {
-    background-color: #667380;
+    background-color: $accleya-grey;
   }
 }

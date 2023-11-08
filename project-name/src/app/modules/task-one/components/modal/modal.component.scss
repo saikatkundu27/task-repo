@@ -1,3 +1,4 @@
+@import "../../../../../variables.scss";
 .modal {
   display: block;
   position: fixed; /* Stay in place */
@@ -8,24 +9,23 @@
   transform: translate(-50%, -50%);
   width: inherit;
   height: inherit;
- 
+
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px -9px 0px;
 }
 .modal-header {
   display: flex;
   justify-content: space-between;
-  font-size: 18px;
+  font-size: $font-size + 4;
 
-  color: #0d2478;
-  background-color: #bdc3c9;
+  color: $accleya-deep-blue;
+  background-color: $header-bg-color;
   padding: 10px;
-  font-weight: bold;
+  font-weight: $fw-600;
 }
 /* Modal Content/Box */
 .modal-content {
   background-color: #fefefe;
   margin: 0px auto;
-
 }
 
 /* The Close Button */
@@ -37,7 +37,7 @@
 
 .close > i:hover,
 .close > i:focus {
-  color: black;
+  color: $accleya-deep-blue;
   text-decoration: none;
   cursor: pointer;
 }

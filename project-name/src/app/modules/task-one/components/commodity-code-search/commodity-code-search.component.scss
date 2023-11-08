@@ -1,5 +1,4 @@
-$cc-width: 400px;
-$cc-height: 300px;
+@import '../../../../../variables.scss';
 
 .cc {
   width: $cc-width !important;
@@ -16,7 +15,7 @@ $cc-height: 300px;
   display: inline;
 }
 .goods-check {
-  font-weight: 100;
+  font-weight:  $fw-100;
   font-style: italic;
   font-size: smaller;
   padding: 10px;

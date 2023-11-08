@@ -1,5 +1,4 @@
-$info-width: 1000px;
-$info-height: 300px;
+@import '../../../../../variables.scss';
 
 .info {
   width: $info-width;
@@ -13,8 +12,8 @@ $info-height: 300px;
   }
   th {
     text-align: left;
-    font-weight: 7s00;
-    color: #0d2478;
+    font-weight:  $fw-600;
+    color: $accleya-deep-blue;
   }
 
   th,
@@ -23,13 +22,13 @@ $info-height: 300px;
     border-left: 0px;
     border-right: 0px;
     border-collapse: collapse;
-    border-color: #f0f0f0;
+    border-color: $table-border-color;
     padding: 10px;
   }
   tr:hover {
     td {
-      background-color: #f8f8f8;
-      font-weight: 600;
+      background-color: $table-hover-color;
+      font-weight:  $fw-600;
       color: black !important;
     }
   }
