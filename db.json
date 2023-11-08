@@ -1,11 +1,130 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "hello"
-      }
-    ],
-    "profile": {
-      "name": "typicode"
+  "tableInfo": [
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1000
+    },
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1007
+    },
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1001
+    },
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1006
+    },
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1005
+    },
+    {
+      "isChecked": false,
+      "type": "Activity Number",
+      "flight": "25 Sep 2016",
+      "transaction": "20 Sep 2016",
+      "partner": "JPSC",
+      "activity": "Enrollment",
+      "miles": 1003
     }
-  }
+  ],
+  "commodityCodeData":[
+    {
+     "code": 112368545687,
+      "desc": "Desc1"
+    },
+    {
+     "code": 112368545687,
+      "desc": "Desc2"
+    },
+    {
+     "code": 112368545687,
+      "desc": "Desc3"
+    },
+    {
+     "code": 112368545687,
+      "desc": "Desc4"
+    },
+    {
+     "code": 1123685545687,
+      "desc": "Desc5"
+    },
+    {
+     "code": 1189898545687,
+      "desc": "Desc1"
+    },
+    {
+     "code": 11236854214687,
+      "desc": "Desc1"
+    },
+    {
+     "code": 112368545354687,
+      "desc": "Desc1"
+    },
+    {
+     "code": 112368545687,
+      "desc": "Desc1"
+    },
+    {
+     "code": 112368545687,
+      "desc": "Desc1"
+    }
+  ],
+  "shcData":[
+    {
+      "code": "ABC",
+      "desc": "Desc1"
+    },
+    {
+      "code": "ABCD",
+      "desc": "Desc1r"
+    },
+    {
+      "code": "ABCD#W",
+      "desc": "Desc1h"
+    },
+    {
+      "code": "ABCG",
+      "desc": "Desc14"
+    },
+    {
+      "code": "ABCG",
+      "desc": "Desc14"
+    },
+    {
+      "code": "ABCG",
+      "desc": "Desc14"
+    },
+    {
+      "code": "ABCG",
+      "desc": "Desc14"
+    }
+  ]
+}
