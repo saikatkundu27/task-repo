@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { CommodityCode, SHC, TableInfo } from 'src/app/models/shared-model';
+import { CommodityCode, SHC, TableInfo } from '../../../models/shared-model';
 
 @Injectable({
   providedIn: 'root'
