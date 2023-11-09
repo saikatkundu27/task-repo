@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { SHC } from 'src/app/models/shared-model';
-
+import { DataApiService } from '../../services/data-api.service';
 
 @Component({
   selector: 'app-shc-search',
@@ -9,51 +9,20 @@ import { SHC } from 'src/app/models/shared-model';
   styleUrls: ['./shc-search.component.scss'],
 })
 export class ShcSearchComponent implements OnInit {
-  @Input('showInput') showInput :boolean=false;
-  @Output() dismiss=new EventEmitter();
+  @Input('showInput') showInput: boolean = false;
+  @Output() dismiss = new EventEmitter();
   searchForm!: FormGroup;
   shcData: SHC[] = [];
-  filteredShcData: SHC[] = []; 
+  filteredShcData: SHC[] = [];
 
-  constructor() {
+  constructor(private dataService: DataApiService) {
     this.searchForm = new FormGroup({
       searchText: new FormControl(''),
     });
-    this.shcData = [
-      {
-        code: 'ABC',
-        desc: 'Desc1',
-      },
-      {
-        code: 'ABCD',
-        desc: 'Desc1r',
-      },
-      {
-        code: 'ABCD#W',
-        desc: 'Desc1h',
-      },
-      {
-        code: 'ABCG',
-        desc: 'Desc14',
-      },
-      {
-        code: 'ABCG',
-        desc: 'Desc14',
-      },
-      {
-        code: 'ABCG',
-        desc: 'Desc14',
-      },
-      {
-        code: 'ABCG',
-        desc: 'Desc14',
-      },
-
-    ];
-    this.filteredShcData = this.shcData;
   }
 
   ngOnInit(): void {
+    this.loadData();
     this.searchForm.valueChanges.subscribe((data) => {
       this.filteredShcData = this.shcData.filter((ele) => {
         return (
@@ -63,13 +32,23 @@ export class ShcSearchComponent implements OnInit {
       });
     });
   }
+  loadData() {
+    this.dataService.getSHCData().subscribe({
+      next: (resp) => {
+        if (resp.status === 200) {
+          this.shcData = resp.body || [];
+          this.filteredShcData = this.shcData;
+        }
+      },
+      error: (err) => {
+        console.error(err);
+      },
+    });
+  }
   handleCancel() {
     this.dismiss.emit('close');
-    console.log('Cancel called');
   }
-  handleApply()
-  {
+  handleApply() {
     this.dismiss.emit('close');
-    console.log('Apply called');
   }
 }

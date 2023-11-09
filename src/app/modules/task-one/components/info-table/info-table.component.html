@@ -15,6 +15,7 @@
         <i class="fa fa-arrow-down sort-icon" (click)="sort('DESC','miles')" *ngIf="sortType === 'ASC'"></i>
       </th>
     </tr>
+    <ng-container *ngIf="tableInfo.length!==0;else loading">
     <tr *ngFor="let info of tableInfo; index as i">
       <td>
         <input
@@ -30,5 +31,11 @@
       <td>{{ info.activity }}</td>
       <td>{{ info.miles }}</td>
     </tr>
+  </ng-container>
   </table>
 </div>
+<ng-template #loading>
+<tr>
+  <td colspan="7">Loading</td>
+</tr>
+</ng-template>

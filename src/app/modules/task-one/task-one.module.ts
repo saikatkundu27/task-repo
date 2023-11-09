@@ -8,7 +8,7 @@ import { SearchFooterComponent } from './components/search-footer/search-footer.
 import { CommodityCodeSearchComponent } from './components/commodity-code-search/commodity-code-search.component';
 import { InfoTableComponent } from './components/info-table/info-table.component';
 import { ModalComponent } from './components/modal/modal.component';
-
+import {  HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -23,7 +23,9 @@ import { ModalComponent } from './components/modal/modal.component';
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    TaskOneRoutingModule
-  ]
+    TaskOneRoutingModule,
+  
+  ],
+
 })
 export class TaskOneModule { }
