@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CommodityCode } from 'src/app/models/shared-model';
+import { CommodityCode } from '../../../../models/shared-model';
 import { DataApiService } from '../../services/data-api.service';
 
 @Component({

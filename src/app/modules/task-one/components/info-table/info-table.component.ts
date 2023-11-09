@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TableInfo } from 'src/app/models/shared-model';
+import { TableInfo } from '../../../../models/shared-model';
 import { DataApiService } from '../../services/data-api.service';
 
 @Component({
